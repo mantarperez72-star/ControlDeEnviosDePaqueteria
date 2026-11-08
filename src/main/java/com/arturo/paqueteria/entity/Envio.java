@@ -24,6 +24,9 @@ public class Envio {
     @Column(nullable = false)
     private String estado;
 
+    @Column(nullable = false)
+    private BigDecimal costoTotal; // <-- AQUÍ ESTÁ EL CAMPO QUE FALTABA
+
     @ManyToOne
     @JoinColumn(name = "tipo_envio_id", nullable = false)
     private TipoEnvio tipoEnvio;
@@ -39,6 +42,11 @@ public class Envio {
     public void setFechaEnvio(LocalDate fechaEnvio) { this.fechaEnvio = fechaEnvio; }
     public String getEstado() { return estado; }
     public void setEstado(String estado) { this.estado = estado; }
+
+
+    public BigDecimal getCostoTotal() { return costoTotal; }
+    public void setCostoTotal(BigDecimal costoTotal) { this.costoTotal = costoTotal; }
+
     public TipoEnvio getTipoEnvio() { return tipoEnvio; }
     public void setTipoEnvio(TipoEnvio tipoEnvio) { this.tipoEnvio = tipoEnvio; }
 }
