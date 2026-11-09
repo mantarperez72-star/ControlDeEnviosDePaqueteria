@@ -21,7 +21,8 @@ public class EnvioRequestDTO {
 
     @NotNull(message = "El ID del tipo de envío es obligatorio")
     private Long tipoEnvioId;
-
+    private String tipoPaquete;
+    private String medidas;
 
     public String getDestinatario() { return destinatario; }
     public void setDestinatario(String destinatario) { this.destinatario = destinatario; }
@@ -33,4 +34,8 @@ public class EnvioRequestDTO {
     public void setEstado(String estado) { this.estado = estado; }
     public Long getTipoEnvioId() { return tipoEnvioId; }
     public void setTipoEnvioId(Long tipoEnvioId) { this.tipoEnvioId = tipoEnvioId; }
+    public String getTipoPaquete() { return tipoPaquete; }
+    public void setTipoPaquete(String tipoPaquete) { this.tipoPaquete = tipoPaquete; }
+    public String getMedidas() { return medidas; }
+    public void setMedidas(String medidas) { this.medidas = medidas; }
 }

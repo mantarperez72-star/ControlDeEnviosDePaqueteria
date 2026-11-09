@@ -11,7 +11,8 @@ public class EnvioResponseDTO {
     private String estado;
     private String nombreTipoEnvio;
     private BigDecimal costoTotal;
-
+    private String tipoPaquete;
+    private String medidas;
 
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
@@ -27,4 +28,8 @@ public class EnvioResponseDTO {
     public void setNombreTipoEnvio(String nombreTipoEnvio) { this.nombreTipoEnvio = nombreTipoEnvio; }
     public BigDecimal getCostoTotal() { return costoTotal; }
     public void setCostoTotal(BigDecimal costoTotal) { this.costoTotal = costoTotal; }
+    public String getTipoPaquete() { return tipoPaquete; }
+    public void setTipoPaquete(String tipoPaquete) { this.tipoPaquete = tipoPaquete; }
+    public String getMedidas() { return medidas; }
+    public void setMedidas(String medidas) { this.medidas = medidas; }
 }
