@@ -1,0 +1,109 @@
+{
+  "info": {
+    "_postman_id": "e8a4b2c1-1234-5678-9abc-def012345678",
+    "name": "PF-26 Control de Envíos",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Crear Tipo Envío",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nombre\": \"Envío a Asia\",\n  \"tarifaBase\": 350.00\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/tipos-envio",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "tipos-envio"]
+        }
+      }
+    },
+    {
+      "name": "Crear Envío",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"destinatario\": \"Kenji Sato\",\n  \"peso\": 5.0,\n  \"fechaEnvio\": \"2026-11-09\",\n  \"estado\": \"recibido\",\n  \"tipoPaquete\": \"Caja\",\n  \"medidas\": \"50x40x30\",\n  \"tipoEnvioId\": 6\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/envios",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "envios"]
+        }
+      }
+    },
+    {
+      "name": "Listar Envíos",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/envios",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "envios"]
+        }
+      }
+    },
+    {
+      "name": "Filtrar por Estado",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/envios/filtrar/estado?estado=recibido",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "envios", "filtrar", "estado"],
+          "query": [
+            {
+              "key": "estado",
+              "value": "recibido"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Total Cobrado por Fecha",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/envios/total-cobrado?fecha=2026-11-08",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "envios", "total-cobrado"],
+          "query": [
+            {
+              "key": "fecha",
+              "value": "2026-11-08"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
