@@ -45,7 +45,8 @@ public class EnvioService {
         envio.setFechaEnvio(dto.getFechaEnvio());
         envio.setEstado(dto.getEstado());
         envio.setTipoEnvio(tipo);
-
+        envio.setTipoPaquete(dto.getTipoPaquete());
+        envio.setMedidas(dto.getMedidas());
 
         BigDecimal costo = dto.getPeso().multiply(tipo.getTarifaBase());
         envio.setCostoTotal(costo);
@@ -65,7 +66,8 @@ public class EnvioService {
         envio.setFechaEnvio(dto.getFechaEnvio());
         envio.setEstado(dto.getEstado());
         envio.setTipoEnvio(tipo);
-
+        envio.setTipoPaquete(dto.getTipoPaquete());
+        envio.setMedidas(dto.getMedidas());
 
         BigDecimal costo = dto.getPeso().multiply(tipo.getTarifaBase());
         envio.setCostoTotal(costo);
@@ -102,6 +104,8 @@ public class EnvioService {
         dto.setEstado(envio.getEstado());
         dto.setNombreTipoEnvio(envio.getTipoEnvio().getNombre());
         dto.setCostoTotal(envio.getCostoTotal());
+        dto.setTipoPaquete(envio.getTipoPaquete());
+        dto.setMedidas(envio.getMedidas());
         return dto;
     }
 }
