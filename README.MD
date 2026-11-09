@@ -76,4 +76,4 @@ El backend sigue una arquitectura por capas:
 *   **Evidencias:** El documento de Word con las capturas de pantalla está en la carpeta `Evidencias proyecto final 2026`.
 
 ---
-*Proyecto desarrollado para el curso de Programación Orientada a Objetos - Universidad Mariano Gálvez de Guatemala.*
+*Proyecto desarrollado para el curso de Programación II - Universidad Mariano Gálvez de Guatemala.*
